@@ -663,13 +663,15 @@ const Home = () => {
               <div>
                 <h4 className="text-lg font-semibold mb-4">Контакты</h4>
                 <ul className="space-y-3 text-blue-300 text-sm">
-                  <li className="flex items-start">
-                    <FaPhone className="w-4 h-4 mt-1 mr-2 flex-shrink-0" />
-                    <span>
+                  <li className="flex flex-col items-start">
+                    <span className="flex gap-2 items-center">
+                    <FaPhone size={10} className=" flex-shrink-0" />
                       <a href="tel:+998712241313" className="hover:text-white transition">+998 (71) 224-13-13</a>
-                      <br />
-                      <a href="tel:+998712248500" className="hover:text-white transition">+998 (71) 224-85-00</a>
                     </span>
+                     <span className="flex gap-2 items-center">
+                      <FaPhone size={10} className=" flex-shrink-0"/>
+                       <a href="tel:+998712248500" className="hover:text-white transition">+998 (71) 224-85-00</a>
+                     </span>
                   </li>
                   <li className="flex items-center">
                     <FaMailBulk className="w-4 h-4 mr-2 flex-shrink-0" />
