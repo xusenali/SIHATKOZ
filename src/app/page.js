@@ -13,10 +13,8 @@ const Home = () => {
   return (
     <div className="w-full relative overflow-hidden min-h-[100vh]">
       <header className="w-full">
-        {/* Yuqori qator */}
         <div className="hidden md:block bg-[#353E8B] text-white text-sm">
           <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center py-2 px-4">
-            {/* Chap tomondagi aloqa ma’lumotlari */}
             <address className="not-italic flex flex-wrap items-center gap-10">
               <span className="flex gap-1 items-center"> <IoLocationSharp size={15} />
                 г. Ташкент, Юнус Абад кв-4, ул. А. Доннья №4</span>
@@ -24,19 +22,16 @@ const Home = () => {
               <div className="flex gap-1 items-center"><MdEmail size={15} /> info@sihatkoz.uz</div>
             </address>
 
-            {/* O'ng tomonda konsultatsiya tugmasi */}
             <button className="bg-white text-[#1d3f8b] font-semibold px-4 py-1 rounded-md hover:bg-gray-100 transition">
               КОНСУЛЬТАЦИЯ
             </button>
           </div>
         </div>
 
-        {/* Pastki navigatsiya */}
         <nav className=" border-[#1d3f8b]">
           <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center py-3 px-4">
-            {/* Logo qismi */}
             <Image
-              src="/logo.svg" // logo rasmi public papkada bo‘lsin
+              src="/logo.svg"
               alt="Sihatkoz logo"
               width={120}
               height={50}
@@ -46,7 +41,7 @@ const Home = () => {
               <ul className="flex flex-col top-0 z-40 bg-white border min-h-max  min-w-full absolute right-0 p-2">
                 <li className="flex h-15 justify-between items-center">
                   <Image
-                    src="/logo.svg" // logo rasmi public papkada bo‘lsin
+                    src="/logo.svg"
                     alt="Sihatkoz logo"
                     width={120}
                     height={60}
