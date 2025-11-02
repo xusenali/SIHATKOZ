@@ -115,7 +115,7 @@ const Home = () => {
       </header>
 
       <main className="relative w-full h-auto">
-        <section className="relative w-full h-200 text-white">
+        <section className="relative w-full h-150 md:h-200 text-white">
           <Image
             src="/Image.png"
             alt="Ophthalmology Clinic"
@@ -133,9 +133,9 @@ const Home = () => {
                 Мы предлагаем полный спектр офтальмологических услуг, направленных
                 на улучшение, сохранение и восстановление зрения.
               </p>
-              <button className="bg-blue-900 hover:bg-blue-700 text-white font-semibold px-8 py-5 rounded inline-flex items-center transition">
+              <button className="bg-blue-900 hover:bg-blue-700 text-white font-semibold px-5 md:px-8 py-3 md:py-5 rounded inline-flex items-center transition">
                 Связаться
-                <span className="ml-5 p-3 bg-white text-black rounded-full text-xl">
+                <span className="ml-5 p-2 md:p-3 bg-white text-black rounded-full text-xl">
                   <FaArrowRight size={10} />
                 </span>
               </button>
