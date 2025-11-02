@@ -28,7 +28,7 @@ const Home = () => {
           </div>
         </div>
 
-        <nav className=" border-[#1d3f8b]">
+        <nav className=" fixed top-0 md:relative z-50 w-full bg-white border-[#1d3f8b]">
           <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center py-3 px-4">
             <Image
               src="/logo.svg"
@@ -109,7 +109,7 @@ const Home = () => {
         </nav>
       </header>
 
-      <main className="relative w-full h-auto">
+      <main className="mt-10 md:mt-0 relative w-full h-auto">
         <section className="relative w-full h-150 md:h-200 text-white">
           <Image
             src="/Image.png"
@@ -431,10 +431,10 @@ const Home = () => {
 
           <div className="text-black rounded-xl shadow-2xl overflow-hidden grid grid-cols-2  lg:grid-cols-4 gap-4">
 
-            <div className="flex text-white items-center gap-2 bg-gradient-to-b from-blue-300 to-blue-900 p-6">
-              <div className="text-2xl md:text-6xl font-extrabold">4.7</div>
-              <p className="mt-2 text-sm opacity-90">из 5</p>
-              <div className="flex items-center mt-1 text-sm md:text-md text-gray-400 leading-none">
+            <div className="flex text-white items-center gap-1 bg-gradient-to-b from-blue-300 to-blue-900 p-6 rounded-tr-2xl rounded-br-2xl">
+              <div className="text-xl md:text-6xl font-bold">4.7</div>
+              <p className=" text-sm opacity-90">из 5</p>
+              <div className="flex items-center mt-1 text-[10px] md:text-md text-gray-400 leading-none">
                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
               </div>
             </div>
