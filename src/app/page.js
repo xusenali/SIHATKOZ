@@ -115,15 +115,15 @@ const Home = () => {
       </header>
 
       <main className="relative w-full h-auto">
-        {/* Hero Section */}
-        <section
-          className="relative bg-cover bg-center text-white"
-          style={{
-            backgroundImage:
-              "url('/image.png')",
-          }}
-        >
-          <div className="bg-black/50 w-full h-full">
+        <section className="relative w-full h-200 text-white">
+          <Image
+            src="/Image.png"
+            alt="Ophthalmology Clinic"
+            className="object-cover"
+            fill
+            priority
+          />
+          <div className="absolute inset-0 bg-black/50 z-10 flex items-center">
             <div className="container mx-auto px-6 py-32 md:py-44 text-start">
               <h1 className="text-3xl md:text-6xl font-bold mb-6 leading-tight">
                 Офтальмологическая <br />
@@ -133,15 +133,18 @@ const Home = () => {
                 Мы предлагаем полный спектр офтальмологических услуг, направленных
                 на улучшение, сохранение и восстановление зрения.
               </p>
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-full inline-flex items-center transition">
-                Связаться <span className="ml-5 p-2 bg-white text-black rounded-full text-xl"> <FaArrowRight size={10} /> </span>
+              <button className="bg-blue-900 hover:bg-blue-700 text-white font-semibold px-8 py-5 rounded inline-flex items-center transition">
+                Связаться
+                <span className="ml-5 p-3 bg-white text-black rounded-full text-xl">
+                  <FaArrowRight size={10} />
+                </span>
               </button>
             </div>
           </div>
         </section>
 
-        {/* Advantages Section */}
-        <section className="relative -mt- md:-mt-20 z-10 px-4">
+
+        <section className="relative -mt-10  z-10 px-4">
           <div className="max-w-7xl mx-auto bg-blue-900 text-white rounded-xl shadow-xl p-5 md:p-10">
             <ul className="flex flex-col md:flex-row justify-between items-center">
               <li>
@@ -199,12 +202,10 @@ const Home = () => {
       </main>
       <section className="py-20 px-6 md:px-12 lg:px-24 bg-white">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
-          {/* Chap tomondagi rasmlar */}
           <div className="relative w-full lg:w-1/2">
-            {/* Asosiy rasm */}
             <div className="rounded-xl overflow-hidden shadow-lg">
               <Image
-                src="/achki.png" // <-- asosiy rasm nomi (public papkada bo‘lishi kerak)
+                src="/achki.png" 
                 alt="Ophthalmology Clinic"
                 width={600}
                 height={400}
@@ -212,10 +213,9 @@ const Home = () => {
               />
             </div>
 
-            {/* Kichik rasm (pastki burchakda joylashgan) */}
             <div className="absolute -bottom-8 -right-5 md:-right-10  w-48 md:w-60 rounded-xl overflow-hidden ">
               <Image
-                src="/oila.png" // <-- kichik rasm nomi
+                src="/oila.png" 
                 alt="Doctor with child"
                 width={300}
                 height={200}
@@ -224,7 +224,6 @@ const Home = () => {
             </div>
           </div>
 
-          {/* O‘ng tomondagi matn */}
           <div className="w-full lg:w-1/2 text-left">
             <p className="text-blue-800 font-medium mb-2 flex items-center lg:justify-start">
               <span className="w-8 h-[2px] bg-blue-800 mr-2"></span> О нас
@@ -239,7 +238,6 @@ const Home = () => {
               стандартных, но и в сложных случаях.
             </p>
 
-            {/* Ro‘yxat (2 ustunli) */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-4 mb-8 text-gray-700 text-sm md:text-base">
               <ul className="space-y-2">
                 <li className="flex items-center">
@@ -274,7 +272,6 @@ const Home = () => {
 
       <section className="py-10 md:py-20  w-full   bg-white">
         <div className=" mx-auto flex flex-col lg:flex-row">
-          {/* Chap tomonda matn */}
           <div className="bg-blue-900 text-white h-150 md:h-180 rounded-tr-[3rem] p-5 md:p-14 lg:w-1/2 w-full shadow-lg">
             <p className="text-blue-300 mb-2">— Почему выбирают нас?</p>
             <h2 className="text-2xl md:text-4xl font-extrabold leading-snug mb-6">
@@ -286,7 +283,6 @@ const Home = () => {
               операций и более <b>50 000</b> лазерных вмешательств при различных заболеваниях глаза.
             </p>
 
-            {/* Progress bars */}
             <div className="space-y-5">
               <div>
                 <p className="font-semibold mb-1 text-gray-100">
@@ -329,17 +325,15 @@ const Home = () => {
             </div>
           </div>
 
-          {/* O‘ng tomonda rasm */}
           <div className="relative h-max w-full flex-1/2 ">
             <Image
-              src="/qiz.png" // <-- public papkada joylashgan rasm nomi
+              src="/qiz.png" 
               alt="Ophthalmology patient"
               width={600}
               height={400}
               className="rounded-bl-[3rem] object-cover w-full h-auto shadow-lg"
             />
 
-            {/* Play tugmasi (video uchun) */}
             <div className="absolute inset-0 flex items-center justify-center">
               <button className="bg-blue-700 hover:bg-blue-800 text-white rounded-full w-14 h-14 flex items-center justify-center text-2xl shadow-md transition">
                 ▶
@@ -351,7 +345,6 @@ const Home = () => {
 
       <section className="py-12 md:py-20 bg-gray-50" aria-labelledby="departments-heading">
         <Head>
-          {/* SEO Metataglar */}
           <title>Bo'limlar - Eng Yaxshi Xizmatlar</title>
           <meta name="description" content="Klinikamizdagi barcha zamonaviy bo'limlar: Refraksion lazer xirurgiya, Vitreoretinal xirurgiya va Intraokulyar lazer xirurgiya. Faqat eng yaxshi mutaxassislar." />
           <meta name="keywords" content="ko'z, xirurgiya, lazer, bo'limlar, klinika, reyting" />
@@ -359,13 +352,11 @@ const Home = () => {
 
         <div className="container mx-auto px-4 max-w-7xl">
 
-          {/* 1. Sarlavha va kirish qismi */}
           <header className="flex flex-col  justify-between items-start mb-12">
             <h1 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">
               — Отделения
             </h1>
             <div className='w-full flex flex-col md:flex-row gap-5 items-start md:items-center justify-between'>
-              {/* SEO: Asosiy sarlavha */}
               <h2 id="departments-heading" className="text-2xl sm:text-4xl md:text-4xl font-extrabold text-gray-900 leading-tight">
                 У нас для вас всё
                 <br className="hidden sm:inline" /> самое лучшее
@@ -385,10 +376,8 @@ const Home = () => {
 
           </header>
 
-          {/* 2. Xizmatlar kartochkalari (Responsive Grid) */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
 
-            {/* Karta 1: Refraksion lazer xirurgiya */}
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300 flex flex-col h-full">
               <div className=" rounded-full w-fit mb-4">
                 <img src="/kuzo.png" className="w-15 h-15" />
@@ -407,10 +396,9 @@ const Home = () => {
               </a>
             </div>
 
-            {/* Karta 2: Vitreoretinal xirurgiya */}
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300 flex flex-col h-full">
               <div className=" rounded-full w-fit mb-4">
-                <img src="/kuzq.png" className="w-15 h-15" /> {/* Rasmdagi kabi ikonka */}
+                <img src="/kuzq.png" className="w-15 h-15" /> 
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-800">Витреоретинальная
                 хирургия</h3>
@@ -426,10 +414,9 @@ const Home = () => {
               </a>
             </div>
 
-            {/* Karta 3: Intraokulyar lazer xirurgiya */}
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300 flex flex-col h-full">
               <div className=" rounded-full w-fit mb-4">
-                <img src="/kuzl.png" className="w-15 h-15 " /> {/* Rasmdagi kabi ikonka */}
+                <img src="/kuzl.png" className="w-15 h-15 " />
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-800">Интраокулярная лазерная
                 хирургия</h3>
@@ -447,33 +434,26 @@ const Home = () => {
 
           </div>
 
-          {/* 3. Statistika qismi (Responsive Bar) */}
           <div className="text-black rounded-xl shadow-2xl overflow-hidden grid grid-cols-2  lg:grid-cols-4 gap-4">
 
-            {/* Reyting qismi */}
             <div className="flex text-white items-center gap-2 bg-gradient-to-b from-blue-300 to-blue-900 p-6">
               <div className="text-2xl md:text-6xl font-extrabold">4.7</div>
               <p className="mt-2 text-sm opacity-90">из 5</p>
               <div className="flex items-center mt-1 text-sm md:text-md text-gray-400 leading-none">
-                {/* Yulduzlar */}
                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
               </div>
             </div>
 
-            {/* Statistik raqamlar qismi */}
-            {/* Stat 1 */}
             <div className="flex flex-col justify-center items-center p-5">
               <p className="text-2xl sm:text-5xl font-extrabold text-blue-900">20+</p>
               <p className="mt-1 text-base opacity-90">видов анализов</p>
             </div>
 
-            {/* Stat 2 */}
             <div className="flex flex-col justify-center items-center p-5">
               <p className="text-2xl sm:text-5xl font-extrabold text-blue-900">100+</p>
               <p className="mt-1 text-base opacity-90">Предоставляемых услуг</p>
             </div>
 
-            {/* Stat 3 */}
             <div className="flex flex-col justify-center items-center p-3">
               <p className="text-2xl sm:text-5xl font-extrabold text-blue-900">12</p>
               <p className="mt-1  text-base opacity-90">Количество врачей</p>
@@ -487,7 +467,6 @@ const Home = () => {
 
       <section className="py-12 md:py-24 bg-white overflow-hidden" aria-labelledby="testimonial-heading">
         <Head>
-          {/* SEO Metataglar */}
           <title>Mijozlar Fikrlari - Klinika Haqida</title>
           <meta name="description" content="Mijozlarimiz SIHAT KO'Z klinikasidagi xizmatlar va operatsiyalar haqida nima deydilar. Lazer korreksiyasi bo'yicha eng yaxshi fikrlar." />
           <meta name="keywords" content="mijozlar fikri, otziv, klinika, oftalmologiya, lazer korreksiya" />
@@ -495,14 +474,11 @@ const Home = () => {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center lg:items-start gap-12">
 
-          {/* 1. Chap tomon - Rasmlar Kollaji */}
           <div className="relative w-full lg:w-1/2 max-w-lg lg:max-w-none min-h-[400px] lg:min-h-[600px] flex-shrink-0">
 
-            {/* Asosiy rasm (Orqa fonda) */}
-            {/* Eslatma: 'Image' komponenti to'g'ri ishlashi uchun rasmlar 'public' papkasida bo'lishi kerak. */}
             <div className=" ml-20 relative w-[75%] md:w-full h-100 md:h-full pb-[66.6%] lg:pb-0 lg:h-[450px]">
               <Image
-                src="/una.png" // Rasm yo'li
+                src="/una.png" 
                 alt="Doctor checking patient's eyes"
                 layout="fill"
                 objectFit="cover"
@@ -510,10 +486,9 @@ const Home = () => {
               />
             </div>
 
-            {/* Ikkinchi rasm (Ustida) */}
             <div className="absolute w-[70%] md:w-[55%] h-[55%] bottom-0 left-0  md:-left-30 overflow-hidden ">
               <Image
-                src="/xola.png" // Rasm yo'li
+                src="/xola.png" 
                 alt="Eye chart test"
                 layout="fill"
                 objectFit="cover"
@@ -522,28 +497,24 @@ const Home = () => {
             </div>
           </div>
 
-          {/* 2. O'ng tomon - Mijoz fikri (Testimonial Card) */}
           <div className="w-full lg:w-1/2 p-4 lg:p-0 mt-5 md:mt-20 lg:mt-0">
             <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
               — Отзывы
             </p>
-            {/* SEO: Asosiy sarlavha */}
             <h2 id="testimonial-heading" className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-8">
               Что говорят о нашей клинике
             </h2>
 
             <div className="relative bg-white p-8 rounded-xl shadow-lg border border-gray-100 lg:ml-10">
-              {/* Asosiy iqtibos matni */}
               <p className="text-lg text-gray-700 leading-relaxed italic mb-8">
                 Дорогой профессор, врачи и весь мед персонал клиники Сихат Куз! Выражаю искреннюю благодарность за операцию – Лазерная коррекция глаз. Это для меня огромное счастье, неописуемая радость. Благодарим, благодарим от всей души! Низкий вам поклон Всем!!!
               </p>
 
-              {/* Muallif profili */}
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
                   <div className="w-12 h-12 rounded-full overflow-hidden mr-4 flex-shrink-0">
                     <Image
-                      src="/qizbola.png" // Rasm yo'li
+                      src="/qizbola.png" 
                       alt="Холлиева Нафосат avatar"
                       width={48}
                       height={48}
@@ -555,11 +526,9 @@ const Home = () => {
                   </div>
                 </div>
 
-                {/* Katta iqtibos ikonka (dizaynga yaqinlashtirish uchun) */}
                 <FaQuoteLeft className="w-12 h-12 text-gray-100 transform rotate-180 -scale-y-100" />
               </div>
 
-              {/* Dizayndagi katta iqtibos belgisi (Absolute positioning) */}
               <div className="absolute right-0 bottom-0 p-8 hidden sm:block">
                 <FaQuoteLeft className="w-16 h-16 text-indigo-50/50" />
               </div>
@@ -571,15 +540,12 @@ const Home = () => {
 
       <section className="w-full bg-white" aria-labelledby="main-content-heading">
         <Head>
-          {/* SEO Metataglar */}
           <title>Yangiliklar, Hamkorlar va Aloqa</title>
           <meta name="description" content="Klinikamizning so'nggi yangiliklari va bloglari. Bizning hamkorlarimiz: ZEISS, REICHERT. Kontakt ma'lumotlari." />
           <meta name="keywords" content="blog, yangiliklar, hamkorlar, ZEISS, Reichert, footer, aloqa, oftalmologiya" />
         </Head>
 
-        {/* ========================================================== */}
-        {/* 1. YANGILIKLAR BO'LIMI (BLOG) */}
-        {/* ========================================================== */}
+      
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
           <div className="text-center mb-12">
             <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">
@@ -593,10 +559,8 @@ const Home = () => {
             </p>
           </div>
 
-          {/* Yangiliklar kartochkalari (Responsive Grid) */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-            {/* Karta 1: Наши результаты */}
             <div className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100">
               <Image src="/Link.png" alt="Our results" width={500} height={300} layout="responsive" objectFit="cover" />
               <div className="p-6">
@@ -610,7 +574,6 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Karta 2: Наши технологии */}
             <div className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100">
               <Image src="/doctor.png" alt="Our technology" width={500} height={300} layout="responsive" objectFit="cover" />
               <div className="p-6">
@@ -624,7 +587,6 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Karta 3: Чего ожидать */}
             <div className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100">
               <Image src="/duble.png" alt="What to expect" width={500} height={300} layout="responsive" objectFit="cover" />
               <div className="p-6">
@@ -640,9 +602,7 @@ const Home = () => {
           </div>
         </div>
 
-        {/* ========================================================== */}
-        {/* 2. HAMKORLAR BO'LIMI (PARTNERS) */}
-        {/* ========================================================== */}
+        
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 text-center">
           <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">
             — Наши партнёры
@@ -651,27 +611,21 @@ const Home = () => {
             Партнёры нашей клиники
           </h2>
 
-          {/* Hamkorlar logotiplari (Responsive) */}
           <div className="flex justify-center items-center space-x-8 md:space-x-16">
-            {/* Reichert */}
             <div className="w-24 md:w-40 opacity-70 hover:opacity-100 transition duration-300">
               <Image src="/company.png" alt="Reichert Partner" width={160} height={50} layout="responsive" />
             </div>
-            {/* ZEISS */}
             <div className="w-24 md:w-40 opacity-70 hover:opacity-100 transition duration-300">
               <Image src="/compny2.png" alt="ZEISS Partner" width={160} height={50} layout="responsive" />
             </div>
           </div>
         </div>
 
-        {/* ========================================================== */}
-        {/* 3. FOOTER (Pastki qism) */}
-        {/* ========================================================== */}
+        
         <footer className="bg-blue-900 text-white pt-12 md:pt-16 pb-6 md:pb-8" aria-labelledby="footer-heading">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-5 gap-y-8 gap-x-6 border-b border-blue-700 pb-10 mb-8">
 
-              {/* 1. Logo va qisqa matn */}
               <div className="col-span-1 md:col-span-2">
                 <div className="flex items-center mb-4">
                   <Image src="/logo2.png" alt="SIHAT KOZ Logo" width={150} height={50} className="mr-3" />
@@ -679,7 +633,6 @@ const Home = () => {
                 <p className="text-md text-blue-300 mt-2 max-w-xs">
                   Мы объединяем медицину, науку и технологии для повышения качества лечения.
                 </p>
-                {/* Ijtimoiy tarmoqlar */}
                 <div className="flex space-x-4 mt-4">
                   <a href="#" aria-label="Facebook" className="text-blue-300 hover:text-white transition"><FaFacebook className="w-5 h-5" /></a>
                   <a href="#" aria-label="Instagram" className="text-blue-300 hover:text-white transition"><FaInstagram className="w-5 h-5" /></a>
@@ -687,7 +640,6 @@ const Home = () => {
                 </div>
               </div>
 
-              {/* 2. O nas (Kompaniya haqida) */}
               <div>
                 <h4 className="text-lg font-semibold mb-4">О нас</h4>
                 <ul className="space-y-2 text-blue-300 text-sm">
@@ -698,7 +650,6 @@ const Home = () => {
                 </ul>
               </div>
 
-              {/* 3. Klientam (Mijozlarga) */}
               <div>
                 <h4 className="text-lg font-semibold mb-4">Клиентам</h4>
                 <ul className="space-y-2 text-blue-300 text-sm">
@@ -709,7 +660,6 @@ const Home = () => {
                 </ul>
               </div>
 
-              {/* 4. Kontakti (Aloqa) */}
               <div>
                 <h4 className="text-lg font-semibold mb-4">Контакты</h4>
                 <ul className="space-y-3 text-blue-300 text-sm">
@@ -735,11 +685,9 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Footer pastki qismi (Copyright) */}
             <div className="flex flex-col md:flex-row justify-between items-center text-sm text-blue-400">
               <p>© 2009-2024 СП ООО SIHAT KO'Z</p>
               <p className="mt-2 md:mt-0 text-right">
-                {/* Dizayndagi kabi pastki qismdagi yozuv */}
               </p>
             </div>
           </div>
